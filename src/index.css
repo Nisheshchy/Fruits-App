@@ -1,0 +1,43 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #de2c4d;
+  --color-secondary: #fb923c;
+
+  --font-poppins: "Poppins", sans-serif;
+  --font-averia: "Averia Serif Libre", serif;
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-primary text-white font-semibold py-3 px-6 rounded-xl shadow-[0px_10px_14px_-7px_#de0029] duration-300;
+  }
+
+  .primary-btn:hover {
+    @apply !scale-110;
+  }
+}
+
+@layer utilities {
+  .drop-shadow {
+    filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-primary text-white 
+    font-semibold py-3 px-6
+    rounded-xl shadow-[0px_10px_14px_-7px_#de0029]
+    hover:!scale-100 duration-300;
+  }
+}
+
+@layer utilities {
+  .drop-shadow {
+    filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.2));
+  }
+}
