@@ -26,18 +26,3 @@
     filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.2));
   }
 }
-
-@layer components {
-  .primary-btn {
-    @apply bg-primary text-white 
-    font-semibold py-3 px-6
-    rounded-xl shadow-[0px_10px_14px_-7px_#de0029]
-    hover:!scale-100 duration-300;
-  }
-}
-
-@layer utilities {
-  .drop-shadow {
-    filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.2));
-  }
-}
