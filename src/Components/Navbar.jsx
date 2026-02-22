@@ -44,7 +44,8 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="container flex justify-between items-center py-4 md:pt-4">
+          className="container mx-auto flex justify-between items-center py-4 md:py-6 px-4">
+
           {/* logo */}
           <div className="text-2xl flex items-center gap-2  uppercase font-bold">
             <p className=" text-primary ">Fruit</p>
