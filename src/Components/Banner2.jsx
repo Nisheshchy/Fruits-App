@@ -1,37 +1,24 @@
 /** @format */
+/** @format */
 
 import React from "react";
 import { motion } from "framer-motion";
 import { FadeUp } from "../utility/animation";
-import banner from "../assets/fruits/banner.png";
+import banner from "../assets/fruits/fruit-plate2.png";
 
-const Banner = () => {
+const Banner2 = () => {
   return (
-    <section className="bg-primary/10">
-      <div className="container grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-yy-0 py-14">
-        {/* banner */}
-        <div className="flex justify-center items-center">
-          <motion.img
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
-            viewport={{ once: true }}
-            src={banner}
-            alt=""
-            className="w-[300px] md:max-w-[400px] h-full object-cover"
-          />
-        </div>
+    <section className="bg-[#f5f5f5]">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 py-14 md:py-24 lg:py-28">
         {/* banner info */}
         <div className="flex flex-col justify-center">
-          <div
-            className="text-center md:text-left space-y-4 
-                  lg:max-w-[400px]">
+          <div className="text-center space-y-6 lg:max-w-[470px] mx-auto">
             <motion.h1
               variants={FadeUp(0.5)}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-3xl lg:text-6xl font-bold uppercase">
+              className="text-4xl lg:text-5xl font-bold uppercase">
               {" "}
               Brand Info
             </motion.h1>
@@ -40,7 +27,8 @@ const Banner = () => {
               variants={FadeUp(0.7)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}>
+              viewport={{ once: true }}
+              className="text-gray-700 text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
               error, minus beatae possimus consectetur ducimus cumque nihil sit
               nemo, laboriosam dolorem deserunt esse aliquid expedita officia
@@ -50,24 +38,38 @@ const Banner = () => {
               variants={FadeUp(0.9)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}>
+              viewport={{ once: true }}
+              className="text-gray-700 text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
               earum voluptate nobis corporis aspernatur quis dolorem, totam
               repellendus, aperiam dolorum sit. Rerum tempore fugiat saepe
-              possimus quos vel aperiam sapiente.\
+              possimus quos vel aperiam sapiente.
             </motion.p>
             <motion.div
-              variants={FadeUp(1.5)}
+              variants={FadeUp(1.1)}
               initial="hidden"
-              animate="visible"
-              className="flex justify-center md:justify-start gap-4">
-              <button className="primary-btn">Lern more</button>
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex justify-center gap-4">
+              <button className="primary-btn">Learn More</button>
             </motion.div>
           </div>
+        </div>
+        {/* banner image */}
+        <div className="flex justify-center items-center">
+          <motion.img
+            initial={{ opacity: 0, scale: 0.7 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
+            viewport={{ once: true }}
+            src={banner}
+            alt="Fruit plate"
+            className="w-[300px] md:w-[380px] lg:w-[430px] h-full object-cover drop-shadow"
+          />
         </div>
       </div>
     </section>
   );
 };
 
-export default Banner;
+export default Banner2;
