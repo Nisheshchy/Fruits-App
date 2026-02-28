@@ -39,14 +39,29 @@ git clone https://github.com/Nisheshchy/Fruits-App.git
 
 ```
 
-Install dependencies
+## Install dependencies
 
 ```bash
 npm install
 ```
 
-Run the project
+## Run the project
 
 ```bash
 npm run dev
 ```
+## React icons
+```bash
+npm install react-icons --save
+```
+## Install tailwindcss in CLI
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
+
+## Framer Motion
+```bash
+npm install framer-motion
+```
+# Author
+### Nishesh Chaudhary
