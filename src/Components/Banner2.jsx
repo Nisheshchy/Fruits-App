@@ -20,7 +20,7 @@ const Banner2 = () => {
               viewport={{ once: true }}
               className="text-4xl lg:text-5xl font-bold uppercase">
               {" "}
-              Brand Info
+              Online Fruits Shop
             </motion.h1>
 
             <motion.p
@@ -51,7 +51,7 @@ const Banner2 = () => {
               whileInView="visible"
               viewport={{ once: true }}
               className="flex justify-center gap-4">
-              <button className="primary-btn">Learn More</button>
+              <button className="primary-btn">Download App</button>
             </motion.div>
           </div>
         </div>

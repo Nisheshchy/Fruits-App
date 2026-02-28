@@ -14,7 +14,7 @@ const bgStyle = {
 
 const Banner3 = () => {
   return (
-    <section className="">
+    <section className="container mb-12">
       <div
         style={bgStyle}
         className="container grid grid-cols-1 md:grid-cols-2 py-14 space-y-6 md:space-y-0">
@@ -30,7 +30,7 @@ const Banner3 = () => {
               whileInView="visible"
               viewport={{ once: true }}
               className="text-3xl lg:text-6xl font-bold uppercase text-orange-500">
-              Brand Info
+              Fresh Fruits for Healthy Life
             </motion.h1>
 
             <motion.p
@@ -57,7 +57,7 @@ const Banner3 = () => {
               whileInView="visible"
               viewport={{ once: true }}
               className="flex justify-center md:justify-start gap-4">
-              <button className="primary-btn">Learn more</button>
+              <button className="primary-btn">Shop Now</button>
             </motion.div>
           </div>
         </div>
