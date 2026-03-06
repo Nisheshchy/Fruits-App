@@ -1,28 +1,141 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
 @import "tailwindcss";
 
 @theme {
+  /* Core brand colors */
   --color-primary: #de2c4d;
-  --color-secondary: #fb923c;
+  --color-secondary: #f5a623;
 
-  --font-poppins: "Poppins", sans-serif;
-  --font-averia: "Averia Serif Libre", serif;
+  /* Extended palette */
+  --color-forest: #1a3c2e;
+  --color-forest-light: #2d5a44;
+  --color-cream: #faf8f3;
+  --color-cream-dark: #f2ede2;
+  --color-amber: #f5a623;
+  --color-amber-light: #ffd080;
+  --color-berry: #de2c4d;
+  --color-mint: #4caf7d;
+  --color-mint-light: #e8f5ee;
+
+  /* Fonts */
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-dm: "DM Sans", system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px 0 rgba(26, 60, 46, 0.1);
+  --shadow-card-hover: 0 12px 40px 0 rgba(26, 60, 46, 0.18);
+  --shadow-btn: 0px 8px 20px -6px rgba(222, 44, 77, 0.45);
+  --shadow-btn-amber: 0px 8px 20px -6px rgba(245, 166, 35, 0.45);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background-color: #faf8f3;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #faf8f3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2d5a44;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1a3c2e;
+  }
 }
 
 @layer components {
+  /* Buttons */
   .primary-btn {
-    @apply bg-primary text-white font-semibold py-3 px-6 rounded-xl shadow-[0px_10px_14px_-7px_#de0029] duration-300;
+    @apply bg-primary text-white font-semibold py-3 px-7 rounded-full shadow-[0px_8px_20px_-6px_rgba(222,44,77,0.45)] duration-300 font-dm tracking-wide;
   }
 
   .primary-btn:hover {
-    @apply !scale-110;
+    @apply scale-105 shadow-[0px_12px_28px_-6px_rgba(222,44,77,0.55)];
+  }
+
+  .secondary-btn {
+    @apply bg-forest text-white font-semibold py-3 px-7 rounded-full shadow-[0px_8px_20px_-6px_rgba(26,60,46,0.35)] duration-300 font-dm tracking-wide;
+  }
+
+  .secondary-btn:hover {
+    @apply scale-105 bg-forest-light;
+  }
+
+  .outline-btn {
+    @apply bg-transparent text-forest border-2 border-forest font-semibold py-3 px-7 rounded-full duration-300 font-dm tracking-wide;
+  }
+
+  .outline-btn:hover {
+    @apply bg-forest text-white scale-105;
+  }
+
+  /* Section labels */
+  .section-label {
+    @apply inline-block bg-mint-light text-mint font-semibold text-sm px-4 py-1.5 rounded-full uppercase tracking-widest font-dm mb-4;
+  }
+
+  /* Cards */
+  .fruit-card {
+    @apply bg-white rounded-3xl shadow-[0_4px_24px_0_rgba(26,60,46,0.10)] hover:shadow-[0_12px_40px_0_rgba(26,60,46,0.18)] transition-all duration-300 cursor-pointer overflow-hidden;
+  }
+
+  /* Feature icon box */
+  .feature-icon {
+    @apply w-12 h-12 rounded-2xl flex items-center justify-center text-xl;
   }
 }
 
 @layer utilities {
   .drop-shadow {
-    filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.15));
+  }
+
+  .drop-shadow-fruit {
+    filter: drop-shadow(0px 16px 32px rgba(26, 60, 46, 0.2));
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #1a3c2e 0%, #4caf7d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-mesh {
+    background-image: radial-gradient(
+        ellipse at 20% 50%,
+        rgba(76, 175, 125, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 80% 20%,
+        rgba(245, 166, 35, 0.08) 0%,
+        transparent 50%
+      );
+  }
+
+  .font-playfair {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-dm {
+    font-family: "DM Sans", system-ui, sans-serif;
   }
 }

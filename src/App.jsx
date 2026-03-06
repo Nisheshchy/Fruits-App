@@ -8,10 +8,13 @@ import Banner from "./Components/Banner";
 import Banner2 from "./Components/Banner2";
 import Banner3 from "./Components/Banner3";
 import Footer from "./Components/Footer";
+import CartDrawer from "./Components/CartDrawer";
+import CheckoutModal from "./Components/CheckoutModal";
+import { CartProvider } from "./context/CartContext";
 
 const App = () => {
   return (
-    <>
+    <CartProvider>
       <main className="overflow-x-hidden">
         <Navbar />
         <Hero />
@@ -20,8 +23,11 @@ const App = () => {
         <Banner2 />
         <Banner3 />
         <Footer />
+        {/* Global overlays */}
+        <CartDrawer />
+        <CheckoutModal />
       </main>
-    </>
+    </CartProvider>
   );
 };
 
